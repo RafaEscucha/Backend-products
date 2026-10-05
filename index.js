@@ -14,12 +14,11 @@ async function ejecutarComando() {
     switch (args[0]) {
         case "GET":
             console.log("GET products");
-            ;
             if (args[1] == "products") {
 
                 const productos = await obtenerProductos()
                 if (args[2]) {
-                    const productoEncontrado = productos.find((producto) => producto.productid == args[2])
+                    const productoEncontrado = productos.find((producto) => producto.id == args[2])
                     if (productoEncontrado) {
                         console.log(productoEncontrado)
                     } else {
